@@ -163,8 +163,8 @@ fi
 apt update
 apt -y --no-install-recommends install openresolv dnsutils wireguard-tools
 curl -fsSL git.io/wgcf.sh | bash
-cp wgcf /usr/local/bin/wgcf
-chmod +x /usr/local/bin/wgcf
+#cp wgcf /usr/local/bin/wgcf
+#chmod +x /usr/local/bin/wgcf
 echo | wgcf register
 wgcf generate
 sed -i '5 s/^/PostUp = ip -4 rule add from eu4 table main\n/' wgcf-profile.conf
