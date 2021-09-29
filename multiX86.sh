@@ -162,7 +162,7 @@ fi
 
 apt update
 apt -y --no-install-recommends install openresolv dnsutils wireguard-tools
-wget -N -4 https://cdn.jsdelivr.net/gh/holyhbc/Oracle-warp/wgcf
+curl -fsSL git.io/wgcf.sh | bash
 cp wgcf /usr/local/bin/wgcf
 chmod +x /usr/local/bin/wgcf
 echo | wgcf register
